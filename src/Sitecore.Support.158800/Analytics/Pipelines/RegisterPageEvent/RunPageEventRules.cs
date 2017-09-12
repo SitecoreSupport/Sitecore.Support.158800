@@ -21,7 +21,7 @@ namespace Sitecore.Support.Analytics.Pipelines.RegisterPageEvent
         {
             Assert.ArgumentNotNull(args, "args");
 
-            if (MediaManager.IsMediaUrl(HttpContext.Current.Request.RawUrl))
+            if (MediaManager.IsMediaUrl(Context.RawUrl))
             {
                 if ((Tracker.Current.Interaction.PreviousPage != null) && (args.PageEvent != null))
                 {
